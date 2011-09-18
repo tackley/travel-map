@@ -16,6 +16,7 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-util" % liftVersion,
     "net.liftweb" %% "lift-webkit" % liftVersion,
     "com.mongodb.casbah" % "casbah-core_2.9.0-1" % "2.1.5-1",
+    "org.mongodb" % "mongo-java-driver" % "2.6.5",
     "com.novus" % "salat-core_2.9.0-1" % "0.0.8-SNAPSHOT",
     "se.scalablesolutions.akka" % "akka-actor" % "1.2-RC6",
     "ch.qos.logback" % "logback-classic" % "0.9.26",

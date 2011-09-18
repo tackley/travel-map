@@ -4,6 +4,7 @@ import net.liftweb.common.Full
 import net.liftweb.http._
 import travel.loader.Loader
 import travel.KmlGenerator
+import net.liftweb.util.Props
 
 class Boot {
   def boot() {

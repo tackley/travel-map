@@ -29,7 +29,7 @@ object Loader {
   val loader = actorOf[Loader].start()
 
   def start() = {
-    Scheduler.schedule(loader, "poll", 1, 5, TimeUnit.MINUTES)
+    Scheduler.schedule(loader, "poll", 1, 10, TimeUnit.MINUTES)
   }
 
   def shutdown() { Scheduler.shutdown() }
