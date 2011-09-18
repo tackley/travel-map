@@ -21,8 +21,9 @@ that [Google Maps can use as an overlay](http://code.google.com/apis/maps/docume
 
 The app itself is implemented in Scala, using [akka](http://akka.io) for background scheduling,
 [casbah](https://github.com/mongodb/casbah)
-and [salat](https://github.com/novus/salat) to talk to mongo, [the lift web framework](http://liftweb.net) and the Guardian's
-[Content API scala client](https://github.com/guardian/open-platform-content-api-scala-client).
+and [salat](https://github.com/novus/salat) to talk to mongo, [the lift web framework](http://liftweb.net), the Guardian's
+[Content API scala client](https://github.com/guardian/open-platform-content-api-scala-client) and 
+[Bootstrap, from Twitter](http://twitter.github.com/bootstrap/).
 
 Right now, it's hosted - for free - by [CloudBees](http://www.cloudbees.com) and [MongoHQ](http://mongohq.com).
 You can see it running at [here](http://travel-map.tackers.cloudbees.net/).
