@@ -2,6 +2,8 @@ package bootstrap.liftweb
 
 import net.liftweb.common.Full
 import net.liftweb.http._
+import travel.loader.Loader
+import travel.KmlGenerator
 
 class Boot {
   def boot() {
@@ -10,10 +12,12 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) => new Html5Properties(r.userAgent))
 
     LiftRules.statelessDispatchTable.append {
-
-      case Req("test" :: Nil, "kml", GetRequest) => () => Full(PlainTextResponse("just testing"))
       case Req("test.kml" :: Nil, ext, GetRequest) => () => Full(XmlResponse(kml))
+      case Req("guardian-travel.kml" :: Nil, ext, GetRequest) => () => Full(XmlResponse(KmlGenerator.kml))
     }
+
+    Loader.start()
+    LiftRules.unloadHooks.append { Loader.shutdown _ }
   }
 
 
